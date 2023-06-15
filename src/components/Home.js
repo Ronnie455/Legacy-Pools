@@ -4,6 +4,7 @@ import Backgroundpic from './assets/Backgroundpic.png'
 import Servicespic from './assets/Servicespic.png'
 import Custompooldesign from './assets/Custompooldesign.png'
 import Maintenance from './assets/Maintenance.png'
+import ModalComponent from './ModalComponent';
 import { Button } from 'reactstrap';
 
 const Home = () => {
@@ -39,7 +40,7 @@ const Home = () => {
             <p>Our team of expert builders will construct your swimming pool with precision and attention to detail, ensuring a high-quality result.</p>
             </div>
             <div className="services-description">
-            <h4 className="underline">Pool Maintenance</h4>
+            <h4 className="underline">Pool Remodel</h4>
             <img src={Maintenance} alt="jesse" className="services-picture"/>
             <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
             </div>
@@ -48,9 +49,9 @@ const Home = () => {
         <div className="services-description">
           <h3 className="underline">Contact Us</h3>
           <p>Ready to discuss your swimming pool project? Contact us today for a free consultation.</p>
-            <Button color="primary">
+            <ModalComponent color="primary">
                 Contact Now
-            </Button>
+            </ModalComponent>
         </div>
         </div>
         </div>

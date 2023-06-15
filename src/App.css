@@ -115,7 +115,35 @@ html{
     padding-bottom: 20px;
 }
 
+.body-modal {
+  height: 500px;
+}
 
+.form-align {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  height: 30px
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 250px
+}
+
+.modal-submit {
+  margin-top: 10px
+}
 
 .footer {
     margin-bottom: 0;
