@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './assets/Logo.png'
+import SocialButtons from './SocialButtons'
 
 const Footer = () => {
   return (
@@ -13,8 +14,11 @@ const Footer = () => {
     </svg>
     </div>
 </div>
+<div className="footer-content">
         <img src={Logo} alt="Legacy Pools footer Pic" className="logo-image-footer" />
-        <p>&copy; 2023 Swimming Pool Builders. All rights reserved.</p>
+        <SocialButtons />
+        <p>&copy; 2023 Legacy Pools LLC | All Rights Reserved.</p>
+    </div>
     </div>
   )
 }

@@ -1,11 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import Backgroundpic from './assets/Backgroundpic.png'
-import Servicespic from './assets/Servicespic.png'
-import Custompooldesign from './assets/Custompooldesign.png'
-import Maintenance from './assets/Maintenance.png'
-import ModalComponent from './ModalComponent';
-import { Button } from 'reactstrap';
+import ModalComponent from './ModalComponent'
+import ServicesCarousel from './ServicesCarousel'
+
 
 const Home = () => {
   return (
@@ -21,41 +19,22 @@ const Home = () => {
     </svg>
     </div>
       </div>
-      <div className="services-container">
-    <div className="hero-content">
+      <div className="hero-content">
       <h2 className="hero-title">Designing and Building Exceptional Swimming Pools</h2>
       <p className="hero-description">Transform your backyard into a stunning oasis with our professional pool building services.</p>
     </div>
-
-      
-        <div className="services-container">
-          <div className="services-description">
-            <h4 className="underline">Custom Pool Design</h4>
-            <img src={Custompooldesign} alt="custom" className="services-picture"/>
-            <p>Create the pool of your dreams with our custom pool design services tailored to your specific needs and preferences.</p>
-            </div>
-            <div className="services-description">
-            <h4 className="underline">Pool Construction</h4>
-            <img src={Servicespic} alt="shotcrete" className="services-picture"/>
-            <p>Our team of expert builders will construct your swimming pool with precision and attention to detail, ensuring a high-quality result.</p>
-            </div>
-            <div className="services-description">
-            <h4 className="underline">Pool Remodel</h4>
-            <img src={Maintenance} alt="jesse" className="services-picture"/>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
-            </div>
-        
-      
-        <div className="services-description">
-          <h3 className="underline">Contact Us</h3>
-          <p>Ready to discuss your swimming pool project? Contact us today for a free consultation.</p>
+    <div>
+      <div className="carousel-container">
+        <ServicesCarousel />
+      </div>
+      <div className="contact-container">
+          <h3 className="contact-us">Contact Us</h3>
+          <p >Ready to discuss your swimming pool project? Contact us today for a free consultation.</p>
             <ModalComponent color="primary">
                 Contact Now
             </ModalComponent>
         </div>
-        </div>
-        </div>
-      
+    </div>
     </div>
   );
 }
