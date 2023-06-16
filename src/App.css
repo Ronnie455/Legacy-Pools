@@ -44,12 +44,24 @@ html{
     left: 0;
     height: 750px;
     width: 100%;
+    overflow: hidden;
 }
 
 .home-background img {
   position: relative;
   z-index: 1;
 }
+
+.background-container {
+  width: 100%;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
 
 .wave {
   position: absolute;
@@ -60,6 +72,7 @@ html{
   line-height: 0;
   transform: rotate(180deg);
   z-index: 1;
+
 }
 
 .wave svg {
@@ -85,34 +98,138 @@ html{
 }
 .underline {
   text-decoration: underline;
+  text-underline-offset: 0.2em
 }
 
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    min-height: 100%;
-    background-color: #5fe6f3;
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5fe6f3;
+  overflow: hidden;
+  padding-top: 50px
 }
 
-.services-picture {
+.carousel-images {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.carousel-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.carousel-images img {
   border-radius: 50%;
-  height: 250px;
-  width: 400px;
+  height: 350px;
+  width: 500px;
+  border-style: solid;
+  border-color: rgb(3, 10, 5);
+  border-width: 3px;
+  box-shadow: 0 0 35px rgba(3, 10, 5, 0.5);
 }
 
-.services p {
-  font-weight: bold;
+.carousel-text {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 10px;
   text-align: center;
 }
 
-.services-description {
-    width: 400px;
-    margin: auto;
-    text-align: center;
-    padding-bottom: 20px;
+.carousel-button {
+  cursor: pointer;
+  height: 120px;
+  left: 105%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: transform 0.1s;
+  width: 80px;
+  border: 0;
+  background-color: transparent;
+}
+
+.carousel-button-top,
+.carousel-button-bottom {
+  background-color: #666;
+  height: 4px;
+  left: -5px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.carousel-button-top::after,
+.carousel-button-bottom::after {
+  background-color: #fff;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.15s;
+}
+
+.carousel-button-top {
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+
+.carousel-button-top::after {
+  left: 100%;
+  right: 0;
+  transition-delay: 0s;
+}
+
+.carousel-button-bottom {
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+
+.carousel-button-bottom::after {
+  left: 0;
+  right: 100%;
+  transition-delay: 0.15s;
+}
+
+.carousel-button:hover .carousel-button-top::after {
+  left: 0;
+  transition-delay: 0.15s;
+}
+
+.carousel-button:hover .carousel-button-bottom::after {
+  right: 0;
+  transition-delay: 0s;
+}
+
+.carousel-button:active {
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+}
+
+.carousel-message {
+  font-size: 24px;
+  font-family: 'Courgette', cursive;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 4px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  background-color: #5fe6f3;
+}
+
+.contact-us {
+  margin-top: 100px;
 }
 
 .body-modal {
@@ -149,6 +266,12 @@ html{
     margin-bottom: 0;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-wave .shape-fill {
   fill: #5fe6f3;
 }
@@ -156,3 +279,6 @@ html{
 .logo-image-footer {
   width: 100px;
 }
+
+
+

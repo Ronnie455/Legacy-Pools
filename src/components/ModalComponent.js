@@ -38,9 +38,9 @@ function ModalComponent() {
 
   return (
     <div>
-      <Button color="primary" onClick={toggleModal}>Open Modal</Button>
+      <Button color="primary" onClick={toggleModal}>Get In Touch</Button>
       <Modal isOpen={isOpen} toggle={toggleModal} size="lg">
-        <ModalHeader toggle={toggleModal}>Modal Title</ModalHeader>
+        <ModalHeader toggle={toggleModal}></ModalHeader>
         <ModalBody className="body-modal">
           <form onSubmit={handleSubmit}>
             <div className="form-align">
