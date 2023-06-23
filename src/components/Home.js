@@ -1,16 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
-import Backgroundpic from './assets/Backgroundpic.png'
+import Footer from './Footer';
 import ModalComponent from './ModalComponent'
-import ServicesCarousel from './ServicesCarousel'
-
+import Servicespic from './assets/Servicespic.png'
+import Backgroundpic from './assets/Backgroundpic.png'
+import Maintenance from './assets/Maintenance.png'
+import Custom from './assets/Custom.png'
+import Kitchen from './assets/Kitchen.png'
+import Fireplace from './assets/Fireplace.png'
+import Safety from './assets/Safety.png'
 
 const Home = () => {
   return (
     <div>
       <Header />
       <div className="home-background">
-      <img src={Backgroundpic} alt="landing pic" className="home-background" />
+      <img src={Backgroundpic} alt="landing pic" className="home-image"/>
       <div className="wave">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
@@ -18,15 +24,50 @@ const Home = () => {
         <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
     </svg>
     </div>
-      </div>
-      <div className="hero-content">
+    <div className="hero-content">
       <h2 className="hero-title">Designing and Building Exceptional Swimming Pools</h2>
       <p className="hero-description">Transform your backyard into a stunning oasis with our professional pool building services.</p>
-    </div>
-    <div>
-      <div className="carousel-container">
-        <ServicesCarousel />
       </div>
+      </div>
+    <div>
+      
+    <div className="services-container">
+          <div className="services-description">
+            <h4 className="underline">Custom Pool And Spa Design</h4>
+            <Link to="/poolandspa">
+            <img src={Servicespic} alt="custom" className="services-picture"/>
+            </Link>
+            <p>Create the pool of your dreams with our custom pool design services tailored to your specific needs and preferences.</p>
+            </div>
+            <div className="services-description">
+            <h4 className="underline">Pool Remodel</h4>
+            <img src={Maintenance} alt="jesse" className="services-picture"/>
+            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            </div>
+
+            <div className="services-description">
+            <h4 className="underline">Custom Concrete / Coping</h4>
+            <img src={Custom} alt="concrete" className="services-picture"/>
+            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            </div>
+
+            <div className="services-description">
+            <h4 className="underline">Outdoor Kitchens</h4>
+            <img src={Kitchen} alt="kitchen" className="services-picture"/>
+            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            </div>
+            <div className="services-description">
+            <h4 className="underline">Fire and Accessories</h4>
+            <img src={Fireplace} alt="accessories" className="services-picture"/>
+            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            </div>
+            <div className="services-description">
+            <h4 className="underline">Safety</h4>
+            <img src={Safety} alt="lifeuard" className="services-picture"/>
+            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            </div>
+    </div>
+       </div>
       <div className="contact-container">
           <h3 className="contact-us">Contact Us</h3>
           <p >Ready to discuss your swimming pool project? Contact us today for a free consultation.</p>
@@ -34,8 +75,9 @@ const Home = () => {
                 Contact Now
             </ModalComponent>
         </div>
+        <Footer />
     </div>
-    </div>
+    
   );
 }
 

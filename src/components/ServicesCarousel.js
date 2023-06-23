@@ -39,7 +39,7 @@ const Carousel = () => {
       if (isTransitioning) {
         const transitionTimeout = setTimeout(() => {
           setIsTransitioning(false);
-        }, 500);
+        }, 0);
   
         return () => {
           clearTimeout(transitionTimeout);
