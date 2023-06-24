@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from "framer-motion"
 import Footer from '../Footer';
 import Friend from '../assets/Friend.png'
 import Poolspa from '../assets/Poolspa.png'
@@ -12,10 +11,10 @@ import Handshake from '../assets/Handshake.png'
 
 const PoolAndSpa = () => {
   return (
-    <div className="pool-spa-body">
-      <div className="pool-spa-container">
-        <h1 className="pool-spa-header">The Process</h1>
-        <img src={Poolspa} alt="pool spa header" className="pool-header-pic"/>
+    <div className="pages-body">
+      <div className="pages-container">
+        <h1 className="pages-header">The Process</h1>
+        <img src={Poolspa} alt="pool spa header" className="pages-header-pic"/>
         <div class="pages-wave">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -59,8 +58,8 @@ const PoolAndSpa = () => {
 <div className="placeholder-container">
   <img src={Placeholder1} alt="placeholder 1" className="placeholder-pic" />
 </div>
-<div className="pool-spa-content">
-  <div className="pool-content-pic">
+<div className="pages-hero-content">
+  <div className="hero-content-pic">
     <img src={Handshake} alt="placeholder 3" className="handshake-pic" />
   </div>
   <div className="content-wrapper">
@@ -87,7 +86,7 @@ const PoolAndSpa = () => {
 <div className="placeholder-container">
   <img src={Placeholder2} alt="placeholder 2" className="placeholder-pic2" />
 </div>
-<Footer waveColor="rgb(145,158,158)" />
+<Footer waveColor="rgb(145,158,150)" />
     </div>
   );
 };

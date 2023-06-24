@@ -41,7 +41,9 @@ const Home = () => {
             </div>
             <div className="services-description">
             <h4 className="underline">Pool Remodel</h4>
+            <Link to="poolremodel">
             <img src={Maintenance} alt="jesse" className="services-picture"/>
+            </Link>
             <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
             </div>
 

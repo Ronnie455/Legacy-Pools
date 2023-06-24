@@ -184,9 +184,9 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   margin-top: 10px
 }
 
-/* POOL AND SPA */
+/* Pages Content */
 
-.pool-spa-container {
+.pages-container {
   position: relative;
   display: flex;
   flex-wrap: wrap ;
@@ -235,12 +235,12 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
 .page-wave-2 .shape-fill {
   fill: #b3bbbb;
 }
-.pool-spa-body {
+.pages-body {
   background: rgb(145,158,158);
 background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 51%, rgba(132,145,145,1) 100%);
 }
 
-.pool-spa-header {
+.pages-header {
   position: absolute;
   padding-bottom: 5%;
   color: #f3f5f6;
@@ -253,7 +253,7 @@ background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 5
   z-index: 3;
 }
 
-.pool-header-pic {
+.pages-header-pic {
   width: 100vw;
   height: 50rem;
   object-fit: cover;
@@ -279,7 +279,7 @@ background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 5
   height: 25rem;
 }
 
-.pool-spa-content {
+.pages-hero-content {
   display: flex;
   flex-wrap: row;
   margin-bottom: 5rem;
@@ -287,11 +287,11 @@ background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 5
   justify-content: center;
 }
 
-.pool-content-pic {
+.hero-content-pic {
   margin-right: 1rem;
 }
 
-.pool-spa-content img {
+.pages-hero-content img {
   width: 30rem;
   height: 25rem;
 }
@@ -300,11 +300,11 @@ background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 5
   width: 50rem;
 }
 
-.pool-spa-content h2 {
+.pages-hero-content h2 {
   text-align: center;
 }
 
-.pool-spa-content p {
+.pages-hero-content p {
   background-color: #bec2c2;
   padding: 20px;
   border-radius: 8px;
@@ -346,6 +346,8 @@ background: linear-gradient(90deg, rgba(145,158,158,1) 7%, rgba(156,179,179,1) 5
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Pool Remodel Page */
 
 /* footer */
 .footer {
@@ -399,8 +401,8 @@ width: 100px;
 .placeholder-pic,
 .placeholder-pic2,
 .handshake-pic,
-.pool-spa-content h2,
-.pool-spa-content p {
+.pages-hero-content h2,
+.pages-hero-content p {
   opacity: 0;
   animation: slideUpAnimation 0.8s ease-in-out forwards;
   
@@ -418,7 +420,7 @@ width: 100px;
 .placeholder-pic,
 .placeholder-pic2,
 .handshake-pic,
-.pool-spa-content h2,
-.pool-spa-content p {
+.pages-hero-content h2,
+.pages-hero-content p {
   animation-delay: 0.7s;
 }
