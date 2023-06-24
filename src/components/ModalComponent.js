@@ -21,19 +21,33 @@ function ModalComponent() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log(formData);
-    // Reset the form data
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
-    // Close the modal
-    toggleModal();
+
+    try {
+      const response = await fetch('/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully.');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        toggleModal();
+      } else {
+        console.log('Error occurred while sending email.');
+      }
+    } catch (error) {
+      console.log('Error occurred while sending email.', error);
+    }
   };
 
   return (
@@ -45,24 +59,24 @@ function ModalComponent() {
           <form onSubmit={handleSubmit}>
             <div className="form-align">
               <div>
-              <label>Name:</label>
-              <input className="form" type="text" name="name" value={formData.name} onChange={handleChange} />
-            </div>
-            <div>
-              <label>Email:</label>
-              <input className="form" type="email" name="email" value={formData.email} onChange={handleChange} />
-            </div>
-            <div>
-              <label>Phone:</label>
-              <input className="form" type="tel" name="phone" value={formData.phone} onChange={handleChange} />
-            </div>
-            <div>
-              <label>Message:</label>
-              <textarea className="form-box" alt="name-box" name="message" value={formData.message} onChange={handleChange} />
-            </div>
-            <div>
-              <button className ="modal-submit" type="submit">Submit</button>
-            </div>
+                <label>Name:</label>
+                <input className="form" type="text" name="name" value={formData.name} onChange={handleChange} />
+              </div>
+              <div>
+                <label>Email:</label>
+                <input className="form" type="email" name="email" value={formData.email} onChange={handleChange} />
+              </div>
+              <div>
+                <label>Phone:</label>
+                <input className="form" type="tel" name="phone" value={formData.phone} onChange={handleChange} />
+              </div>
+              <div>
+                <label>Message:</label>
+                <textarea className="form-box" alt="name-box" name="message" value={formData.message} onChange={handleChange} />
+              </div>
+              <div>
+                <button className="modal-submit" type="submit">Submit</button>
+              </div>
             </div>
           </form>
         </ModalBody>

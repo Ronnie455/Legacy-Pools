@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Logo from './assets/Logo.png';
 import { Navbar, NavbarBrand, Nav, DropdownMenu, DropdownItem, NavbarText } from 'reactstrap';
+import ModalComponent from './ModalComponent';
 
 function Header(args) {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,9 @@ function Header(args) {
           <NavbarText className="me-3">Gallery</NavbarText>
           <NavbarText className="me-3">Our Service</NavbarText>
           <NavbarText className="me-3">About Us</NavbarText>
-          <NavbarText className="me-3">Contact us</NavbarText>
+          <div className="header-modal">
+          <ModalComponent />
+          </div>
         </div>
       </Navbar>
     </div>
