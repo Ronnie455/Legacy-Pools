@@ -3,28 +3,32 @@ import Logo from './assets/Logo.png';
 import { Navbar, NavbarBrand, NavbarText } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import ModalComponent from './ModalComponent';
-import {
-  MDBContainer,
-  MDBCollapse,
-  MDBNavbar,
-  MDBNavbarToggler,
-  MDBIcon,
-  MDBBtn,
-} from 'mdb-react-ui-kit';
+import { MDBContainer, MDBCollapse, MDBNavbar, MDBNavbarToggler, MDBIcon, MDBBtn,} from 'mdb-react-ui-kit';
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
     window.addEventListener('resize', handleResize);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -37,18 +41,14 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div className={`navbar-container ${scrolled ? 'solid' : ''}`}>
       {/* Mobile View */}
       {windowWidth <= 768 && (
-        <div className={`navbar-container ${showMobileMenu ? '' : 'hidden'}`}>
+        <div className={`navbar-mobile ${showMobileMenu ? '' : 'hidden'}`}>
           <MDBNavbar>
             <MDBContainer fluid>
               <NavbarBrand href="/">
-                <img
-                  src={Logo}
-                  alt="Legacy Pools Pic"
-                  className="logo-image-mobile"
-                />
+                <img src={Logo} alt="Legacy Pools Pic" className="logo-image-mobile" />
               </NavbarBrand>
               <MDBNavbarToggler
                 type="button"
@@ -83,14 +83,10 @@ const Header = () => {
 
       {/* Desktop View */}
       {windowWidth > 768 && (
-        <div className={`navbar-container ${showMobileMenu ? 'hidden' : ''}`}>
+        <div className={`navbar-desktop ${showMobileMenu ? 'hidden' : ''}`}>
           <Navbar>
             <NavbarBrand href="/">
-              <img
-                src={Logo}
-                alt="Legacy Pools Pic"
-                className="logo-image"
-              />
+              <img src={Logo} alt="Legacy Pools Pic" className="logo-image" />
             </NavbarBrand>
 
             <div className="d-flex align-items-center">
@@ -102,21 +98,14 @@ const Header = () => {
                 <Link to="/poolremodel" onClick={handleLinkClick}>Our Services</Link>
               </NavbarText>
               <div className="header-modal">
-                <ModalComponent onClick={handleLinkClick} />
+              <ModalComponent onClick={handleLinkClick} />
               </div>
             </div>
           </Navbar>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default Header;
-
-
-
-
-
-
-

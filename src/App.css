@@ -24,7 +24,7 @@
     height: 45px;
   }
 
-  .navbar-container.solid{
+  .navbar-container.solid {
     background-color: rgb(254, 253, 253);
     
   }
@@ -211,7 +211,11 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
 }
 
 .modal-content {
-  height: 34rem
+  height: 43rem
+}
+
+.alert-success {
+  position: fixed;
 }
 
 /* Pages Content */
