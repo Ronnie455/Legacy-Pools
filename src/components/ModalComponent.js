@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-function ModalComponent() {
+function ModalComponent({ waveColor }) {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -84,6 +84,7 @@ function ModalComponent() {
           <Button color="secondary" onClick={toggleModal}>Cancel</Button>
         </ModalFooter>
       </Modal>
+      
     </div>
   );
 }
