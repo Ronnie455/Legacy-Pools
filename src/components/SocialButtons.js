@@ -13,7 +13,7 @@ const SocialButtons = () => {
         <img src={Facebook1} alt="Facebook" className="me-2" />
       </a>
     </div>
-  );
+  )
 }
 
 export default SocialButtons;

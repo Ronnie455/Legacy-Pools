@@ -79,7 +79,7 @@ const PoolRemodel = () => {
 <NoWaveFooter />
         
 </div>
-      );
-    };
+      )
+    }
       
 export default PoolRemodel

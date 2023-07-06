@@ -124,7 +124,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   font-size: 1.5rem;
 }
 
-
 .services-container {
   padding-top: 50px;
   position: relative;
@@ -197,7 +196,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   width: 16rem;
 }
 
-
 .form-box {
   display: flex;
   flex-direction: column;
@@ -231,7 +229,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   justify-content: center;
 }
 
-
 .pages-header {
   position: absolute;
   padding-bottom: 5%;
@@ -250,7 +247,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   height: 50rem;
   object-fit: cover;
 }
-
 
 .placeholder-container {
   display: flex;
@@ -303,7 +299,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 .friend-list-container {
   position: relative;
@@ -359,8 +354,6 @@ text-shadow: 2px 2px 4px rgba(247, 239, 239, 0.5);
     width: 100vw
   }
 }
-
-
 
 .friend-item {
   margin-right: 4rem;
@@ -446,8 +439,6 @@ background: linear-gradient(90deg, rgba(250,246,246,1) 0%, rgba(233,229,229,1) 5
   }
 }
 
- 
-
  .services-images {
   width: 25vw;
   height: 30vh;
@@ -511,7 +502,6 @@ font-size: 0.8rem;
 fill: #5fe6f3;
 }
 
-
 .logo-image-footer {
 width: 100px;
 }
@@ -531,16 +521,6 @@ align-items: center;
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* Animations */
 
 @keyframes slideUpAnimation {
@@ -554,7 +534,6 @@ align-items: center;
   }
 }
 
-
 .friend-item,
 .bullet-list,
 .placeholder-pic,
@@ -566,7 +545,6 @@ align-items: center;
   animation: slideUpAnimation 0.8s ease-in-out forwards;
   
 }
-
 
 .friend-item {
   animation-delay: 0.5s;

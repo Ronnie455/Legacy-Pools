@@ -24,7 +24,7 @@ const Carousel = () => {
         setIsTransitioning(true);
         setCurrentIndex((prevIndex) => (prevIndex === images.length - 3 ? 0 : prevIndex + 3));
       }
-    };
+    }
   
     const renderImages = () => {
         return images.slice(currentIndex, currentIndex + 3).map((image, index) => (
@@ -32,20 +32,20 @@ const Carousel = () => {
             <img src={image} alt={`Image ${index}`} />
             <p className="carousel-message">{messages[currentIndex + index]}</p>
           </div>
-        ));
-      };
+        ))
+      }
   
     useEffect(() => {
       if (isTransitioning) {
         const transitionTimeout = setTimeout(() => {
           setIsTransitioning(false);
-        }, 0);
+        }, 0)
   
         return () => {
-          clearTimeout(transitionTimeout);
+          clearTimeout(transitionTimeout)
         };
       }
-    }, [isTransitioning]);
+    }, [isTransitioning])
   
     return (
       <div className="carousel">
@@ -55,6 +55,6 @@ const Carousel = () => {
           <div className="carousel-button-bottom" />
         </button>
       </div>
-    );
-  };
+    )
+  }
 export default Carousel;
