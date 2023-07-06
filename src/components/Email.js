@@ -11,16 +11,16 @@ const handleSubmit = async (e) => {
       });
   
       if (response.ok) {
-        console.log('Email sent successfully.');
+        console.log('Email sent successfully.')
         setFormData({
           name: '',
           email: '',
           phone: '',
           message: ''
         });
-        toggleModal();
+        toggleModal()
       } else {
-        console.log('Error occurred while sending email.');
+        console.log('Error occurred while sending email.')
       }
     } catch (error) {
       console.log('Error occurred while sending email.', error);

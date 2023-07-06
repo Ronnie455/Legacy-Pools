@@ -2,28 +2,28 @@ import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap';
 
 function ModalComponent() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('')
 
   const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
+    })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
       const response = await fetch('/contact', {
@@ -41,18 +41,18 @@ function ModalComponent() {
           phone: '',
           message: ''
         });
-        toggleModal();
+        toggleModal()
       } else {
-        setErrorMessage('A problem has occurred while submitting your data.');
+        setErrorMessage('A problem has occurred while submitting your data.')
       }
     } catch (error) {
-      setErrorMessage('An error occurred while sending the email.');
+      setErrorMessage('An error occurred while sending the email.')
     }
-  };
+  }
 
   const closeErrorMessage = () => {
-    setErrorMessage('');
-  };
+    setErrorMessage('')
+  }
 
   return (
     <div>

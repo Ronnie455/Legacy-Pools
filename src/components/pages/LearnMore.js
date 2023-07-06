@@ -9,7 +9,6 @@ import Shovels from '../assets/Shovels.png'
 import Handshake from '../assets/Handshake.png'
 import NoWaveFooter from '../NoWaveFooter';
 import WaveBottom from '../WaveBottom';
-import WaveTop from '../WaveTop';
 import Header from '../Header';
 
 const LearnMore = () => {

@@ -6,39 +6,39 @@ import ModalComponent from './ModalComponent';
 import { MDBContainer, MDBCollapse, MDBNavbar, MDBNavbarToggler, MDBIcon, MDBBtn,} from 'mdb-react-ui-kit';
 
 const Header = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [scrolled, setScrolled] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth)
     };
 
     const handleScroll = () => {
       if (window.scrollY > 200) {
-        setScrolled(true);
+        setScrolled(true)
       } else {
-        setScrolled(false);
+        setScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const handleMobileMenuToggle = () => {
-    setShowMobileMenu(!showMobileMenu);
-  };
+    setShowMobileMenu(!showMobileMenu)
+  }
 
   const handleLinkClick = () => {
     setShowMobileMenu(false); // Close the mobile menu when a link is clicked
-  };
+  }
 
   return (
     <div className={`navbar-container ${scrolled ? 'solid' : ''}`}>
@@ -105,7 +105,7 @@ const Header = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
 export default Header;
