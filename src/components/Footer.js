@@ -15,9 +15,9 @@ const Footer = ({ waveColor }) => {
     </div>
 </div>
 <div className="footer-content">
-        <img src={Logo} alt="Legacy Pools footer Pic" className="logo-image-footer" />
         <SocialButtons />
-        <p>&copy; 2023 Legacy Pools LLC | All Rights Reserved.</p>
+         <img src={Logo} alt="Legacy Pools footer Pic" className="logo-image-footer" /><p>&copy; 2023 Legacy Pools LLC | CCB #208220</p>
+         <p>All Rights Reserved</p>
     </div>
     </div>
   )

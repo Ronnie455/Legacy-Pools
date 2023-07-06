@@ -1,18 +1,19 @@
 import React from 'react';
-import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+import Facebook1 from './assets/Facebook1.png';
+import Instagram1 from './assets/Instagram1.png';
 
 const SocialButtons = () => {
   return (
     <div className="social-buttons">
-    <MDBBtn style={{ backgroundColor: '#ac2bac' }} href='https://www.instagram.com/legacy_pools/' target="_blank" rel="noopener noreferrer">
-      <MDBIcon className='me-2' fab icon='instagram' /> Instagram
-    </MDBBtn>
+      <a href="https://www.instagram.com/legacy_pools/" target="_blank" rel="noopener noreferrer">
+        <img src={Instagram1} alt="Instagram" className="me-2" />
+      </a>
 
-      <MDBBtn style={{ backgroundColor: '#3b5998' }} href='https://www.facebook.com/people/Legacy-Pools-LLC/100063495162428/'target="_blank" rel="noopener noreferrer">
-      <MDBIcon className='me-2' fab icon='facebook-f' /> Facebook
-    </MDBBtn>
+      <a href="https://www.facebook.com/people/Legacy-Pools-LLC/100063495162428/" target="_blank" rel="noopener noreferrer">
+        <img src={Facebook1} alt="Facebook" className="me-2" />
+      </a>
     </div>
   );
 }
 
-export default SocialButtons
+export default SocialButtons;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap';
 
 function ModalComponent() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +9,7 @@ function ModalComponent() {
     phone: '',
     message: ''
   });
+  const [errorMessage, setErrorMessage] = useState('');
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
@@ -34,7 +35,6 @@ function ModalComponent() {
       });
 
       if (response.ok) {
-        console.log('Email sent successfully.');
         setFormData({
           name: '',
           email: '',
@@ -43,11 +43,15 @@ function ModalComponent() {
         });
         toggleModal();
       } else {
-        console.log('Error occurred while sending email.');
+        setErrorMessage('A problem has occurred while submitting your data.');
       }
     } catch (error) {
-      console.log('Error occurred while sending email.', error);
+      setErrorMessage('An error occurred while sending the email.');
     }
+  };
+
+  const closeErrorMessage = () => {
+    setErrorMessage('');
   };
 
   return (
@@ -56,6 +60,11 @@ function ModalComponent() {
       <Modal isOpen={isOpen} toggle={toggleModal} size="lg">
         <ModalHeader toggle={toggleModal}></ModalHeader>
         <ModalBody className="body-modal">
+          {errorMessage && (
+            <Alert color="danger" toggle={closeErrorMessage}>
+              {errorMessage}
+            </Alert>
+          )}
           <form onSubmit={handleSubmit}>
             <div className="form-align">
               <div>
@@ -87,5 +96,6 @@ function ModalComponent() {
     </div>
   );
 }
+
 
 export default ModalComponent;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
 import Header from './Header';
 import Footer from './Footer';
 import ModalComponent from './ModalComponent'
@@ -29,53 +30,53 @@ const Home = () => {
       <p className="hero-description">Transform your backyard into a stunning oasis with our professional pool building services.</p>
       </div>
       </div>
-    <div>
-      
+    
+      <div className="home-service-button">
+        <p>If you want to learn more about our listed services below</p>
+        <Link to="/poolremodel">click here!</Link>
+      </div>
     <div className="services-container">
           <div className="services-description">
             <h4 className="underline">Custom Pool And Spa Design</h4>
-            <Link to="/poolandspa">
             <img src={Servicespic} alt="custom" className="services-picture"/>
-            </Link>
-            <p>Create the pool of your dreams with our custom pool design services tailored to your specific needs and preferences.</p>
+           
             </div>
             <div className="services-description">
             <h4 className="underline">Pool Remodel</h4>
-            <Link to="poolremodel">
             <img src={Maintenance} alt="jesse" className="services-picture"/>
-            </Link>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            
             </div>
 
             <div className="services-description">
             <h4 className="underline">Custom Concrete / Coping</h4>
             <img src={Custom} alt="concrete" className="services-picture"/>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
             </div>
 
             <div className="services-description">
             <h4 className="underline">Outdoor Kitchens</h4>
             <img src={Kitchen} alt="kitchen" className="services-picture"/>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
             </div>
             <div className="services-description">
             <h4 className="underline">Fire and Accessories</h4>
             <img src={Fireplace} alt="accessories" className="services-picture"/>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
             </div>
             <div className="services-description">
             <h4 className="underline">Safety</h4>
-            <img src={Safety} alt="lifeuard" className="services-picture"/>
-            <p>Keep your pool in excellent condition with our comprehensive pool maintenance services, including cleaning, repairs, and regular upkeep.</p>
+            <img src={Safety} alt="lifeguard" className="services-picture"/>
             </div>
     </div>
-       </div>
-      <div className="contact-container">
-          <h3 className="contact-us">Contact Us</h3>
-          <p >Ready to discuss your swimming pool project? Contact us today for a free consultation.</p>
+       
+       <div className="learn-more">
+        <p>Want to learn more about the pool building process?</p>
+        <p> Are you ready to contact us today for a free consultation.</p>
+        <div className="contact-learn">
+        <Link to="/learnmore">
+        <Button color="primary">Learn More</Button>
+        </Link>
             <ModalComponent color="primary">
                 Contact Now
             </ModalComponent>
+            </div>
         </div>
         <Footer />
     </div>
