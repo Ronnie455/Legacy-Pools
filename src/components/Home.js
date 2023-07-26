@@ -16,6 +16,11 @@ const Home = () => {
   return (
     <div>
       <Header />
+      
+      <div className="hero-content">
+      <h2 className="hero-title">Designing and Building Exceptional Swimming Pools</h2>
+      <p className="hero-description">Transform your backyard into a stunning oasis with our professional pool building services.</p>
+      </div>
       <div className="home-background">
       <img src={Backgroundpic} alt="landing pic" className="home-image"/>
       <div className="wave">
@@ -25,15 +30,11 @@ const Home = () => {
         <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
     </svg>
     </div>
-    <div className="hero-content">
-      <h2 className="hero-title">Designing and Building Exceptional Swimming Pools</h2>
-      <p className="hero-description">Transform your backyard into a stunning oasis with our professional pool building services.</p>
       </div>
-      </div>
-    
       <div className="home-service-button">
-        <p>If you want to learn more about our listed services below</p>
-        <Link to="/poolremodel">click here!</Link>
+      <Link to="/poolremodel">
+        <Button color="primary">View Listed Services</Button>
+        </Link>
       </div>
     <div className="services-container">
           <div className="services-description">
@@ -51,24 +52,20 @@ const Home = () => {
             <h4 className="underline">Custom Concrete / Coping</h4>
             <img src={Custom} alt="concrete" className="services-picture"/>
             </div>
-
-            <div className="services-description">
+            <div className="services-description-2">
             <h4 className="underline">Outdoor Kitchens</h4>
             <img src={Kitchen} alt="kitchen" className="services-picture"/>
             </div>
-            <div className="services-description">
+            <div className="services-description-2">
             <h4 className="underline">Fire and Accessories</h4>
             <img src={Fireplace} alt="accessories" className="services-picture"/>
             </div>
-            <div className="services-description">
-            <h4 className="underline">Safety</h4>
-            <img src={Safety} alt="lifeguard" className="services-picture"/>
-            </div>
+            
     </div>
        
        <div className="learn-more">
-        <p>Want to learn more about the pool building process?</p>
-        <p> Are you ready to contact us today for a free consultation.</p>
+        <p>Interested in learning more about the building process?</p>
+        <p> Contact us today for a free consultation.</p>
         <div className="contact-learn">
         <Link to="/learnmore">
         <Button color="primary">Learn More</Button>

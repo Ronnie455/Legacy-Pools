@@ -4,7 +4,6 @@ import Maintenance from '../assets/Maintenance.png'
 import Custom from '../assets/Custom.png'
 import Kitchen from '../assets/Kitchen.png'
 import Fireplace from '../assets/Fireplace.png'
-import Safety from '../assets/Safety.png'
 import NoWaveFooter from '../NoWaveFooter'
 import Servicesheader from '../assets/Servicesheader.png'
 
@@ -66,15 +65,7 @@ const PoolRemodel = () => {
       <h3>Enhance your outdoor living experience with a range of carefully selected features and accessories that add both functionality and enjoyment to your space. Create a cozy and inviting atmosphere with a charming fireplace, perfect for gathering around with loved ones and creating lasting memories. Add a touch of excitement to your pool area with fun and versatile accessories like pool slides, offering a splash of adventure for everyone. Illuminate your pool with tasteful and energy-efficient pool lights, creating a soothing ambiance for evening swims. For those who love active play, consider adding a basketball hoop for friendly games and outdoor fun. At our company, we specialize in crafting custom outdoor solutions tailored to your specific needs and preferences. Let us help you transform your outdoor space into a welcoming haven that combines comfort, entertainment, and relaxation.</h3>
     </div>
   </div>
-  <div class="services-sections-2">
-    <div class="services-text">
-        <h1>Safety</h1>
-      <h3>At our company, we prioritize the safety and well-being of our clients and their families. We offer a range of reliable and affordable pool safety equipment to ensure a secure swimming environment for everyone. Our selection includes essential safety features such as pool covers, pool alarms, and pool fences that meet industry standards. These practical and effective measures provide peace of mind, giving you the confidence that your pool area is secure and protected. Our knowledgeable team is here to guide you in choosing the right safety equipment for your specific needs, ensuring that you can enjoy your pool with confidence and tranquility. Safety is our utmost priority, and we are committed to helping you create a safe and enjoyable swimming experience for all.</h3>
-    </div>
-    <div class="services-images">
-      <img src={Safety} alt="lifeguard" className="services-images" />
-    </div>
-    </div>
+  
   </div>
 <NoWaveFooter />
         

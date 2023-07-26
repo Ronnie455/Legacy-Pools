@@ -74,6 +74,9 @@ const Header = () => {
                 <Link to="/" onClick={handleLinkClick}>Home</Link>
               </MDBBtn>
               <MDBBtn block className="border-bottom m-0" color="link">
+                <Link to="/learnmore" onClick={handleLinkClick}>Learn More</Link>
+              </MDBBtn>
+              <MDBBtn block className="border-bottom m-0" color="link">
                 <ModalComponent onClick={handleLinkClick} />
               </MDBBtn>
             </div>

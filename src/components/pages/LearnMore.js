@@ -1,14 +1,10 @@
 import React from 'react';
-import Friend from '../assets/Friend.png'
 import Poolspa from '../assets/Poolspa.png'
 import Placeholder1 from '../assets/Placeholder1.png'
 import Placeholder2 from '../assets/Placeholder2.png'
-import Sketch from '../assets/Sketch.png'
-import Excavator from '../assets/Excavator.png'
 import Shovels from '../assets/Shovels.png'
 import Handshake from '../assets/Handshake.png'
 import NoWaveFooter from '../NoWaveFooter';
-import WaveBottom from '../WaveBottom';
 import Header from '../Header';
 
 const LearnMore = () => {
@@ -37,22 +33,6 @@ const LearnMore = () => {
   </p>
 </div>
 
-<div className="friend-container">
-  <div className="friend-item">
-    <img src={Friend} alt="friend icon" className="friend-pic" />
-  </div>
-  <div className="friend-item">
-    <img src={Sketch} alt="Sketch icon" className="friend-pic" />
-  </div>
-  <div className="friend-item">
-    <img src={Excavator} alt="Excavator icon" className="friend-pic" />
-  </div>
-</div>
-
-
-<div className="wave-container-bottom">
-        <WaveBottom />
-        </div>
 
 <div className="placeholder-container">
   <img src={Placeholder1} alt="placeholder 1" className="placeholder-pic" />
